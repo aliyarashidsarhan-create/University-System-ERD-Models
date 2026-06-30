@@ -23,14 +23,20 @@ namespace University_Management_system.Module
         [Required]
         [Range(1,6)]
         public int creditHours { get; set; }
+
         [ForeignKey(nameof(Department))]
         public int departmentId { get; set; }
+
         [ForeignKey(nameof(Instructor))]
         public int ? instructorId { get; set; }
         [Required]
         [MaxLength(20)]
         public string semesterOffered { get; set; }
 
+        public Department Department { get; set; }//navigation property
 
+        public Instructor ?Instructor {  get; set; }//NAVIGATION 
+
+        public ICollection<Enrollment> Enrollments { get; set; } = new List<Enrollment>();
     }
 }

@@ -32,5 +32,9 @@ namespace University_Management_system.Module
         [MaxLength(50)]
         public string academicTitle { get; set; }//user input
 
+        public Department? HeadDepartment {  get; set; }//navigation property
+
+        public ICollection<Course> courses {  get; set; }= new List<Course>();//navig
+
     }
 }

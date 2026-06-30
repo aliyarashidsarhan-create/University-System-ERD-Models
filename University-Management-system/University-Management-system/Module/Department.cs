@@ -23,7 +23,12 @@ namespace University_Management_system.Module
         [Required]
         [Range(0,double.MaxValue)]
         public decimal budget { get; set; }
-        [ForeignKey("headInstructor")]
+
+        [ForeignKey(nameof(HeadInstructor))]
         public int ?headInstructorId {  get; set; }//foregn key
+        public Instructor? HeadInstructor {  get; set; }//navigation property
+
+        public ICollection<Course> Courses { get; set; } = new List<Course>();//navigation property
+
     }
 }

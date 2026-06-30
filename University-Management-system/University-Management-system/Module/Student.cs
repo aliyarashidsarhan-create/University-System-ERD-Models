@@ -31,6 +31,6 @@ namespace University_Management_system.Module
         [Range(0, 4)]
         public decimal gpa { get; set; } = 0;//defult
 
-        
+        public ICollection<Enrollment> Enrollments { get; set; } = new List<Enrollment>();//navigation
     }
 }
