@@ -6,7 +6,8 @@ using System.Threading.Tasks;
 
 namespace University_Management_system.Module
 {
-    internal class Course
+   public class Course
     {
+       
     }
 }
