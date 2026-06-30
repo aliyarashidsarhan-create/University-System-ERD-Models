@@ -19,10 +19,10 @@ namespace University_Management_system.Module
         [MaxLength(100)]
         public string departmentName {  get; set; } //user input
         [MaxLength(50)]
-        public string? building {  get; set; }
+        public string? building {  get; set; }//user input
         [Required]
         [Range(0,double.MaxValue)]
-        public decimal budget { get; set; }
+        public decimal budget { get; set; }//
 
         [ForeignKey(nameof(HeadInstructor))]
         public int ?headInstructorId {  get; set; }//foregn key

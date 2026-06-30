@@ -15,20 +15,20 @@ namespace University_Management_system.Module
         public int enrollmentId {  get; set; }//system generated
 
         [ForeignKey(nameof(Student))]
-        public int studentId { get; set; }
+        public int studentId { get; set; }//user input from list of student
 
         [ForeignKey(nameof (Course))]
-        public int courseId { get; set; }
+        public int courseId { get; set; }//user input from list of cource
         [Required]
-        public DateTime enrollmentDate { get; set; }
+        public DateTime enrollmentDate { get; set; }//user input
         [MaxLength(2)]
-        public string? finalGrade {  get; set; }
+        public string? finalGrade {  get; set; }//user input
         [Required]
         [MaxLength(20)]
         public string status { get; set; } = "In Progress";//defult
 
         public Student student { get; set; }//navigation
-        public Course course { get; set; }
+        public Course course { get; set; }//navegation
 
 
     }

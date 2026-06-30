@@ -19,19 +19,19 @@ namespace University_Management_system.Module
         [MaxLength(10)]
         public string courseCode { get; set; }//user input
         [Required,MaxLength(150)]
-        public string courseTitle { get; set; }
+        public string courseTitle { get; set; }//user input
         [Required]
         [Range(1,6)]
-        public int creditHours { get; set; }
+        public int creditHours { get; set; }//user input
 
         [ForeignKey(nameof(Department))]
-        public int departmentId { get; set; }
+        public int departmentId { get; set; }//user input from list
 
         [ForeignKey(nameof(Instructor))]
-        public int ? instructorId { get; set; }
+        public int ? instructorId { get; set; }//user input from list
         [Required]
         [MaxLength(20)]
-        public string semesterOffered { get; set; }
+        public string semesterOffered { get; set; } //
 
         public Department Department { get; set; }//navigation property
 
