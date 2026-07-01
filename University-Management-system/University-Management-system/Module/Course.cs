@@ -31,7 +31,7 @@ namespace University_Management_system.Module
         public int ? instructorId { get; set; }//user input from list
         [Required]
         [MaxLength(20)]
-        public string semesterOffered { get; set; } //
+        public string semesterOffered { get; set; } //user input
 
         public Department Department { get; set; }//navigation property
 

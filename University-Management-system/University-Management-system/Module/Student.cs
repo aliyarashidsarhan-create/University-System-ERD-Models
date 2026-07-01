@@ -29,7 +29,7 @@ namespace University_Management_system.Module
         [Range(2000,2030)]
         public int enrollmentYear { get; set; }//user input 
         [Range(0, 4)]
-        public decimal gpa { get; set; } = 0;//defult
+        public decimal gpa { get; set; } = 0;//defult value
 
         public ICollection<Enrollment> Enrollments { get; set; } = new List<Enrollment>();//navigation
     }
